@@ -82,13 +82,14 @@ function App() {
       <section id="benefits">
         <h2>Benefits</h2>
         <ul>
+          <h3 className="benefitHeader">Diffusers:</h3>
           <li>🌹 Non toxic</li>
           <li>🌹 Eco friendly</li>
           <li>🌹 Alcohol free </li>
           <li>🌹 Super long lasting </li>
           <li>🌹 Has 15 unique Fragrances </li>
           <li>🌹 Infused with essential oils</li>
-          
+          <h3 className="benefitHeader">Perfumes:</h3>
           <li>🌹Lasts up to 72 hours, keeping you confident all day long.</li>
           <li>🌹 Gentle on the skin, suitable for daily use.</li>
           <li>🌹 Made from natural ingredients for safety.</li>

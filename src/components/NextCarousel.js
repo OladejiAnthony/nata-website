@@ -14,6 +14,8 @@ import men from "../assets/men.jpg";
 import paco from "../assets/paco.jpg";
 import santal from "../assets/santal.jpg";
 import rabbane from "../assets/rabanne.jpg";
+import Thirty from "../assets/30ml.jpg"
+import van from "../assets/van.jpg"
 
 const Buttons = ({ label, fontIcon, ariaButton, onEvent }) => {
   return (
@@ -135,68 +137,82 @@ const NextCarousel = () => {
           aria-describedby="focus"
         >
           <ul>
-            <TestiSlide
-              name="PERFUME OIL COLLECTIONS"
-              src={cat1}
-              description="30ml - #9000, 15ml - #7000, 6ml - #2500"
+          <TestiSlide
+              name="Designer Perfume Oil 6ml Collections"
+              src={Thirty}
+              price="9000 each"
+              //description="30ml - #9000, 15ml - #7000, 6ml - #2500"
             />
             <TestiSlide
-              name="DESIGNER PERFUME OIL"
-              price="#9000"
+              name="Designer Perfume Oil 15ml Collections"
+              price="#7000 each"
               src={cat2}
               //description="30ml - #9000, 15ml - #7000, 6ml - #2500"
             />
             <TestiSlide
-              name="Designer Jimmy Choo"
+              name="Designer Perfume Oil 6ml Collections"
+              src={cat1}
+              price="2500 each"
+              //description="30ml - #9000, 15ml - #7000, 6ml - #2500"
+            />
+            <TestiSlide
+              name="Designer Jimmy Choo 30ml"
               price="#9000"
               src={jimmy}
               description="Jimmy Choo's perfume oil exudes sophisticated elegance and sensual glamour."
             />
             <TestiSlide
-              name="Designer Creed Aventus Men"
+              name="Designer Creed Aventus Men 30ml"
               price="#9000"
               src={creed}
               description="Creed Aventus Men perfume oil exudes sophisticated fruity woody charm."
             />
             <TestiSlide
-              name="Designer Baccarat Rouge 540"
+              name="Designer Baccarat Rouge 540 30ml"
               price="#9000"
               src={baccarat}
               description="This perfume oil embodies luxurious saffron amber warmth"
             />
             <TestiSlide
-              name="Designer Dior Sauvage"
+              name="Designer Kayalli Vanilla28 30ml"
+              price="#9000"
+              src={van}
+              description="Kayali Vanilla 28 perfume oil wraps you in creamy sweetness."
+            />
+            <TestiSlide
+              name="Designer Dior Sauvage 30ml"
               price="#9000"
               src={dior}
               description="Dior Sauvage perfume oil unleashes fresh energetic bergamot woody sensuality."
             />
             <TestiSlide
-              name="Designer Kayalli Vanilla28"
-              price="#9000"
-              src={kayalli}
-              description="Kayali Vanilla 28 perfume oil wraps you in creamy sweetness."
-            />
-            <TestiSlide
-              name="Designer 212 Men"
-              price="#9000"
-              src={men}
-              description="212 Men perfume oil blends sophisticated citrus with woody masculinity "
-            />
-            <TestiSlide
-              name="Designer Paco Rabanne 1Million"
+              name="Designer Paco Rabanne 1Million 30ml"
               price="#9000"
               src={paco}
               description="Paco Rabanne 1 Million perfume oil exudes luxurious gold seduction."
             />
             <TestiSlide
-              name="Designer Santal 33 Lelabo"
-              price="#9000"
+              name="Designer Kayalli Vanilla28 15ml"
+              price="#7000"
+              src={kayalli}
+              description="Kayali Vanilla 28 perfume oil wraps you in creamy sweetness."
+            />
+            <TestiSlide
+              name="Designer 212 Men 15ml"
+              price="#7000"
+              src={men}
+              description="212 Men perfume oil blends sophisticated citrus with woody masculinity "
+            />
+            
+            <TestiSlide
+              name="Designer Santal 33 Lelabo 15ml"
+              price="#7000"
               src={santal}
               description="This perfume oil embodies smooth woody sophistication."
             />
             <TestiSlide
-              name="Designer Paco Rabanne 1Million"
-              price="#9000"
+              name="Designer Paco Rabanne 1Million 15ml"
+              price="#7000"
               src={rabbane}
               description="Paco Rabanne 1 Million perfume oil showcases sexy leather charm"
             />

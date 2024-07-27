@@ -151,6 +151,7 @@ section {
 
       h3 {
         margin-top: 0.5rem;
+        
       }
 
       p {
@@ -166,6 +167,10 @@ section {
     li {
       margin: 0.5rem 0;
       font-size: 1.2rem;
+    }
+    h3 {
+      color: goldenrod;
+        text-decoration-line: underline;
     }
   }
 
@@ -266,6 +271,7 @@ section#benefits {
   margin-top: 10rem;
   padding: 0 1rem;
 }
+
 @media (max-width: 768px) {
   section#benefits {
     margin-top: 10rem;
