@@ -1,0 +1,129 @@
+@import '../styles/mixins';
+
+.navbar {
+  background-color: #fff;
+  padding: 0.5rem 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed; /* Make the navbar sticky */
+  top: 0; /* Stick to the top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it is above other content */
+  transition: background-color 0.3s ease; /* Smooth transition for background change on scroll */
+
+  &__logo img {
+    color: #00BFA5; /* Initial color */
+    transition: color 0.3s ease; /* Smooth transition for color change on scroll */
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    margin: 0 0 0 12%;
+    gap: 54px;
+
+    li {
+      margin-left: 20px;
+
+      a {
+        color: #4C4C4C;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: relative; /* Position relative for the pseudo-element */
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px; /* Adjust this value to control the distance of the line from the text */
+          width: 0; /* Start with zero width */
+          height: 2px; /* Height of the line */
+          background-color: #1D4CBF; /* Color of the line */
+          transition: width 0.3s ease; /* Smooth transition for the line */
+        }
+
+        &:hover::after {
+          width: 100%; /* Expand the line on hover */
+        }
+
+        &:hover {
+          color: #1D4CBF; /* Change the text color on hover */
+        }
+
+        &.active {
+          color: #1D4CBF;
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background-color: #fff;
+    border: none;
+    font-size: 24px;
+    color: #1D4CBF;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: #FFAE43;
+    }
+  }
+
+  &.open .navbar__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #afadaa;
+    padding: 1rem 0;
+
+    li {
+      margin: 10px 0;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &:hover {
+          color: #1D4CBF;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    &__toggle {
+      display: block;
+    }
+
+    &__links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+
+    &.open .navbar__links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+

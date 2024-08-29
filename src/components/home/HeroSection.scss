@@ -1,0 +1,102 @@
+@import "../../styles/variables";
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: $neutral-lightest;
+  text-align: center;
+  background-color: $background-dark;
+
+  .slick-slider {
+    height: 100vh;
+  }
+
+  .slick-slide {
+    height: 100vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .slide {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(50%); // Darkens the background for better text visibility
+    }
+  }
+
+  .overlay {
+    position: absolute; // Positioned relative to .hero
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Centering content vertically
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 200px 20px 0 20px;
+    z-index: 10; // Ensure it's on top of the images
+
+    h1 {
+      color: #e5e5e5;
+      text-align: center;
+      font-family: "Merriweather", serif;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 24px;
+    }
+
+    p {
+      color: #fff;
+      text-align: center;
+      font-family: "Merriweather", serif;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      margin-bottom: 80px;
+      max-width: 804px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      background-color: #1d4cbf;
+      color: #fff;
+      padding: 20px 32px;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      font-family: "Roboto", serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      width: 304px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #091739;
+      }
+    }
+  }
+}
+
+
+
+

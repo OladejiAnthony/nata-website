@@ -1,0 +1,34 @@
+@import '../../styles/variables'; // Import color variables for consistency
+
+.footer {
+  background-color: #345EC5; // Using the primary color from variables
+  color: #FEFEFE;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  a {
+    color: #FEFEFE;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: #FFAE43;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+    padding: 15px 0;
+  }
+}
