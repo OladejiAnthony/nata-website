@@ -9,6 +9,7 @@ import VisionMission from '../components/home/VisionMission';
 import ValuesSection from '../components/home/ValuesSection';
 import LeadersSection from '../components/home/LeadersSection';
 import Mission from '../components/home/Mission';
+import Latest from '../components/home/Latest';
 
 const HomePage = () => {
   const scrollToSection = (id) => {
@@ -27,6 +28,8 @@ const HomePage = () => {
       <Mission  />
       <ValuesSection  />
       <LeadersSection  />
+      <Latest />
+
     </div>
   );
 };

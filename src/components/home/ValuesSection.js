@@ -13,40 +13,37 @@ const ValuesSection = () => {
       </div>
       <ul>
         <li>
-          <h3>Ingenuity: </h3>
+          <h3>Ingenuity:</h3>
           <p>
-            {" "}
             We are proficiently ingenuous, and this is evident in our service
             delivery.
           </p>
         </li>
         <li>
-          <h3>Integrity: </h3>
-          <p>We are sincere with our panoply of professionals.</p>
+          <h3>Integrity:</h3>
+          <p>
+          We are sincere with our panoply of professionals.</p>
         </li>
         <li>
-          <h3>Top-notch Services: </h3>
-          <p>
-            We ensure a longstanding memorable service of highest quality and
+          <h3>Top-notch Services:</h3>
+          <p>We ensure a longstanding memorable service of highest quality and
             undaunted level of professionalism, thus encouraging our customers
             to always call back for more of our quality services, with
             referrals.
           </p>
         </li>
         <li>
-          <h3>Timely Delivery: </h3>
-          <p>
-            We are delineate with our services as we know that time is a
+          <h3>Timely Delivery:</h3>
+          <p>We are delineate with our services as we know that time is a
             precious gift given to mankind. We do not waste our clients time;
             whether in consulting, services rendering or delivery.
           </p>
         </li>
         <li>
-          <h3>Partnership: </h3>
-          <p>
-            We not only work on your vehicle but we treat our clients with
+          <h3>Partnership:</h3>
+          <p>We not only work on your vehicle but we treat our clients with
             dignifying respects, as we partner in every ounce of
-            friendship and highest
+            friendship and highest.
           </p>
         </li>
       </ul>

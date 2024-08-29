@@ -63,7 +63,9 @@
     li {
       display: flex;
       flex-direction: row;
+      justify-content: flex-start;
       margin: 1rem 0;
+      gap: 5px;
 
       h3 {
         color: "#666";

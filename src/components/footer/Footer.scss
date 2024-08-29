@@ -1,29 +1,78 @@
-@import '../../styles/variables'; // Import color variables for consistency
+@import "../../styles/variables"; // Import color variables for consistency
 
 .footer {
-  background-color: #345EC5; // Using the primary color from variables
-  color: #FEFEFE;
+  background-color: #345ec5; // Using the primary color from variables
+  color: #fefefe;
   text-align: center;
-  padding: 20px 0;
+  padding: 1rem 5%; // increased padding for better spacing
   font-size: 14px;
   position: relative;
   bottom: 0;
   width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
 
-  p {
-    margin: 0;
-    font-size: 16px;
-  }
+  .footer_left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 106px;
 
-  a {
-    color: #FEFEFE;
-    text-decoration: none;
-    font-weight: bold;
+    img {
+      width: 100%;
+      height: 80px;
+    }
 
-    &:hover {
-      color: #FFAE43;
+    .icons {
+      display: flex;
+      gap: 10px;
+      
     }
   }
+
+  .footer_right {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .footer__btm {
+    display: "flex";
+    flex-direction: "row";
+    justify-content: "flex-start";
+    gap: "100px";
+
+    .white_line {
+      background-color: #fff;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0; /* Adjust this value to control the distance of the line from the text */
+      width: 100%; /* Start with zero width */
+      height: 2px; /* Height of the line */
+    }
+
+    h3 {
+      color: #fefefe;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
+    }
+  }
+
+  // a {
+  //   color: #fefefe;
+  //   text-decoration: none;
+  //   font-weight: bold;
+
+  //   &:hover {
+  //     color: #ffae43;
+  //   }
+  // }
 }
 
 @media (max-width: 768px) {
