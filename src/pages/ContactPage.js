@@ -1,9 +1,21 @@
 import React from "react";
 import "../styles/ContactPage.scss";
+import contact1 from "../assets/images/contact1.png";
+import contact2 from "../assets/images/contact2.png";
+import contact3 from "../assets/images/contact3.png";
+import training from "../assets/icons/training.png";
+import QA from "../assets/icons/QA.png";
+import networking from "../assets/icons/network.png";
+import advocacy from "../assets/icons/advocacy.png";
 
 const ContactPage = () => {
   return (
     <div className="contact__page">
+      <div className="contact_pics">
+        <img src={contact1} alt="contact1" />
+        <img src={contact2} alt="contact2" />
+        <img src={contact3} alt="contact3" />
+      </div>
       <div className="heading">
         <div className="header__box">
           <div className="upper_line"></div>
@@ -93,6 +105,135 @@ const ContactPage = () => {
           remains committed to its mission of excellence in the automotive
           repair industry.
         </p>
+      </div>
+
+      <div className="miss__section">
+        <div className="left__text">
+          <div className="header__box">
+            <div className="upper_line"></div>
+            <h2>Mission</h2>
+            <div className="lower_line"></div>
+          </div>
+          <p>
+            At NATA, our mission is to foster a community of skilled and
+            certified auto technicians who are equipped with the latest industry
+            knowledge and best practices. We aim to promote excellence in auto
+            repair services, ensure consumer protection, and uphold the
+            integrity of the profession.
+          </p>
+        </div>
+        <div className="right__text">
+          <div className="header__box">
+            <div className="upper_line"></div>
+            <h2>Vision</h2>
+            <div className="lower_line"></div>
+          </div>
+          <p>
+            To be the leading professional body in Lagos State, setting the
+            standard for excellence in automotive repair and maintenance, and
+            empowering auto technicians with the skills, knowledge, and ethical
+            practices to excel in their craft. We envision a future where every
+            vehicle owner enjoys reliable, high-quality service from trusted and
+            certified technicians, contributing to the safety and well-being of
+            our community.
+          </p>
+        </div>
+      </div>
+
+      <div className="we_do">
+        <div className="header__box">
+          <div className="upper_line"></div>
+          <h2>What we do</h2>
+          <div className="lower_line"></div>
+        </div>
+        <div className="boxes">
+          <div className="box">
+            <img src={training} alt="training" />
+            <h3>Training & certification:</h3>
+            <p>
+              We offer comprehensive training programs and certification courses
+              to help auto technicians stay current with the latest technologies
+              and techniques in the automotive industry.
+            </p>
+          </div>
+          <div className="box">
+            <img src={QA} alt="q-a" />
+            <h3>Quality Assurance:</h3>
+            <p>
+              NATA is committed to setting and maintaining high standards of
+              service quality. We encourage our members to adhere to ethical
+              practices and provide exceptional service to their customers.
+            </p>
+          </div>
+          <div className="box">
+            <img src={networking} alt="networking" />
+            <h3>Networking Opportunities:</h3>
+            <p>
+              NATA is committed to setting and maintaining high standards of
+              service quality. We encourage our members to adhere to ethical
+              practices and provide exceptional service to their customers.
+            </p>
+          </div>
+          <div className="box">
+            <img src={advocacy} alt="advocacy" />
+            <h3>Advocacy and representation:</h3>
+            <p>
+              We advocate for the interests of auto technicians at the state and
+              national levels, working closely with regulatory bodies, industry
+              stakeholders, and the government to ensure a fair and supportive
+              environment for our members.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="objectives">
+        <div className="header__box">
+          <div className="upper_line"></div>
+          <h2>Objectives</h2>
+          <div className="lower_line"></div>
+        </div>
+        <div className="list">
+          <p>Some of the objectives of NATA include:</p>
+          <ol>
+            <li>
+              To organize and unite all practicing automobile technicians in
+              Nigeria into a single standard professional body.
+            </li>
+            <li>
+              To promote, protect and advance the interests of members in the
+              society
+            </li>
+            <li>
+              {" "}
+              To organize welfare and programs that could help improve the
+              living condition of members and reduce poverty.
+            </li>
+            <li>
+              To educate members on how various policies and events in their
+              socio environment affect them and their work.
+            </li>
+            <li>
+              {" "}
+              To help project government objectives and policies on automobile
+              technological development, education, health, economy and
+              political matters.
+            </li>
+            <li>
+              Mobilizing members for an enhanced participation in National
+              development.
+            </li>
+            <li>
+              Organizing training program through workshops, seminars and
+              symposium on political, economic, health and any other societal
+              matters including the trades of members for an enhance
+              professionalism.
+            </li>
+            <li>
+              To improve and regulate the training and practices of members.
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   );
