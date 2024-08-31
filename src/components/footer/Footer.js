@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footer_right">
           <div className="col">
             <h3>About Us</h3>
-            <Link>Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
             <Link>Core values</Link>
             <Link>Mission & Vision</Link>
           </div>
@@ -35,8 +35,8 @@ const Footer = () => {
           </div>
           <div className="col">
             <h3>News & Events</h3>
-            <Link>FAQs</Link>
-            <Link>News</Link>
+            <Link to="/faq">FAQs</Link>
+            <Link to="/news">News</Link>
           </div>
         </div>
       </div>

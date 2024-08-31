@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage';
 import './styles/App.scss';
 import Footer from './components/footer/Footer';
 import ServicesPage from './pages/ServicesPage';
+import Faq from './pages/Faq';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
       <Footer />
     </Router>
