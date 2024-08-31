@@ -10,11 +10,14 @@ import './styles/App.scss';
 import Footer from './components/footer/Footer';
 import ServicesPage from './pages/ServicesPage';
 import Faq from './pages/Faq';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop>
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path='/services' element={<ServicesPage />}  />
@@ -23,9 +26,12 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/faq" element={<Faq />} />
       </Routes>
+      </ScrollToTop>
       <Footer />
     </Router>
   );
 }
 
 export default App;
+
+
