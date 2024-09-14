@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import React, { useState, useEffect, useRef } from "react";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import "../styles/ContactPage.scss";
 import addressIcon from "../assets/icons/address.png";
 import emailIcon from "../assets/icons/email.png";
 import phoneIcon from "../assets/icons/phone.png";
 import facebookIcon from "../assets/icons/facebook.png";
 import twitterIcon from "../assets/icons/twitter.png";
-
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -17,11 +16,14 @@ const ContactPage = () => {
     message: "",
   });
 
-  // Update these coordinates to match the exact location of Chupet Store
+  // Set the latitude and longitude for Chupet Store in Ilorin, Kwara State
   const [location, setLocation] = useState({
-    lat: 8.4799, // Latitude for Chupet Store
-    lng: 4.5418, // Longitude for Chupet Store
+    lat: 8.4966, // Latitude for Ilorin, Kwara State
+    lng: 4.5428, // Longitude for Ilorin, Kwara State
   });
+
+  const mapRef = useRef(null);
+  const markerRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -51,9 +53,35 @@ const ContactPage = () => {
     }
   }, []);
 
+  const handleMapLoad = (map) => {
+    mapRef.current = map;
+
+    if (window.google && window.google.maps.marker) {
+      const { AdvancedMarkerElement } = window.google.maps.marker;
+
+      markerRef.current = new AdvancedMarkerElement({
+        position: location,
+        map: mapRef.current,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (mapRef.current && window.google && window.google.maps.marker) {
+      const { AdvancedMarkerElement } = window.google.maps.marker;
+
+      if (markerRef.current) markerRef.current.setMap(null);
+
+      markerRef.current = new AdvancedMarkerElement({
+        position: location,
+        map: mapRef.current,
+      });
+    }
+  }, [location]);
+
   const mapContainerStyle = {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   };
 
   return (
@@ -154,14 +182,16 @@ const ContactPage = () => {
         </div>
 
         <div className="map">
-          <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
+          <LoadScript
+            googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}
+            libraries={["places", "geometry", "drawing"]}
+          >
             <GoogleMap
               mapContainerStyle={mapContainerStyle}
               center={location}
               zoom={15}
-            >
-              <Marker position={location} />
-            </GoogleMap>
+              onLoad={handleMapLoad}
+            />
           </LoadScript>
         </div>
       </div>

@@ -26,7 +26,7 @@ function App() {
           <Route path="/services/:category" element={<ServicesDetails />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/news-details" element={<NewsDetails />} />
+          <Route path="/news-details/:id" element={<NewsDetails />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/faq" element={<Faq />} />
         </Routes>
@@ -37,5 +37,3 @@ function App() {
 }
 
 export default App;
-
-
