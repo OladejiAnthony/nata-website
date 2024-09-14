@@ -9,6 +9,7 @@ import service6 from "../assets/images/brake.png";
 import service7 from "../assets/images/ac.png";
 import service8 from "../assets/images/blacksmith.png";
 import service9 from "../assets/images/upholstery.png";
+import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
   return (
@@ -20,11 +21,14 @@ const ServicesPage = () => {
           <div className="lower_line"></div>
         </div>
       </div>
+      {/*
+          Link to={`/product-details/${id}`}
+       */}
       <div className="services__images">
-        <div className="service_image">
+        <Link to="/service-details" className="service_image">
           <img src={service1} alt="service1" />
           <h3>AUTOMOBILE MECHANICS</h3>
-        </div>
+        </Link>
         <div className="service_image">
           <img src={service2} alt="service2" />
           <h3>WELDER</h3>
