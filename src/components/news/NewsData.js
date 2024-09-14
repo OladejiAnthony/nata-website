@@ -1,0 +1,2 @@
+//NewsData.js
+

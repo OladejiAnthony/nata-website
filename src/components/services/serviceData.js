@@ -1,4 +1,6 @@
-export const serviceArray = [
+//serviceData.js
+
+export const serviceData = [
     {
       category: "Auto Mechanics",
       overview: {
@@ -76,6 +78,47 @@ export const serviceArray = [
           "Access to Resources: Obtain industry news, technical manuals, and best practices.",
           "Discounts on Tools and Equipment: Exclusive deals with suppliers.",
           "Professional Development: Workshops, seminars, and certification courses.",
+        ],
+      },
+    },
+    {
+      category: "Welders",
+      overview: {
+        title: "Overview",
+        content:
+          "Welders play a vital role in the automotive industry, specializing in the joining of metals to create strong and durable structures. Their skills are crucial in the construction, repair, and customization of vehicle components. At the National Association of Autotechnicians in Lagos State, we celebrate the craftsmanship and precision that welders bring to their work.",
+      },
+      mission: {
+        title: "Mission",
+        content:
+          "Our mission is to support welders by providing access to the latest technology, training, and professional development opportunities. We strive to uphold high standards of quality and safety in all welding practices within the automotive sector.",
+      },
+      services: {
+        title: "Services Offered",
+        content:
+          "Panel beaters affiliated with our association offer a wide range of services, including:",
+        list: [
+          "Structural Repairs: Welding and reinforcing vehicle frames and body parts to restore integrity.",
+          "Fabrication: Custom metalwork for automotive parts, including exhaust systems, roll cages, and more.",
+          "Body Modifications: Altering and customizing vehicle bodies for performance or aesthetic enhancements.",
+          "Aluminum and Stainless Steel Welding: Specialized welding for lightweight and corrosion-resistant materials.",
+          "Precision Welding: For delicate components that require high accuracy and strength.",
+        ],
+      },
+      training: {
+        title: "Training and Certification",
+        content:
+          "We provide comprehensive training programs that cover advanced welding techniques, safety protocols, and the use of modern welding equipment. Our certification ensures that welders meet industry standards and are recognized for their expertise.",
+      },
+      membership: {
+        title: "Membership Benefits",
+        content:
+          "Members of our association enjoy numerous benefits, including:",
+        list: [
+          "Professional Development: Access to training, workshops, and certification programs.",
+          "Industry Resources: Technical manuals, safety guidelines, and best practices in welding.",
+          "Networking: Opportunities to connect with other professionals and industry leaders.",
+          "Discounts on Equipment: Exclusive deals on welding tools and materials."
         ],
       },
     },
