@@ -108,15 +108,57 @@
 }
 
 @media (max-width: 768px) {
-  .navbar__links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
+  .navbar {
+    display: flex;
+    justify-content: space-between; // Ensures space between logo and toggle button
+    padding: 0 5%; // Adjust padding if needed
+
+    &__logo {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &__toggle {
+      display: block;
+      justify-content: flex-end;
+    }
+
+    &__links {
+      display: none;
+      flex-direction: column;
+      width: 100vw; // Make the links cover the entire viewport width when open
+      text-align: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #afadaa;
+      padding: 1rem 0;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          color: white;
+          font-size: 20px;
+          font-weight: 400;
+
+          &:hover {
+            color: #1d4cbf;
+          }
+        }
+      }
+    }
   }
 
-  .navbar__toggle {
-    display: block;
+  .navbar.open .navbar__links {
+    display: flex; // Display the links when the navbar is open
+    margin: 0;
+    height: 80vh;
+
+    li {
+      margin: 2px;
+    }
   }
 }
+
 
