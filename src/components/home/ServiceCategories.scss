@@ -1,14 +1,55 @@
-.serviceCat__section {
+.services__cat {
     position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #4C4C4C;
+    min-height: 100vh;
+    background-color: rgba(238, 242, 253, 0.40);
     padding: 1rem 5%;
     margin: 1rem 0 5rem 0;
+  
+    .heading {
+      text-align: center;
+      color: #4C4C4C;
+  
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #4C4C4C;
+      }
+  
+      .upper_line,
+      .lower_line {
+        width: 80px;
+        height: 4px;
+        background-color: #4C4C4C;
+        margin: 0 auto 10px;
+      }
+    }
+  
+    .services__carousel {
+      .service__image {
+        text-align: center;
+        padding: 1rem;
+  
+        .service__link {
+            text-decoration: none;
 
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+              }
+        
+              h3 {
+                color: #4C4C4C;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+              }
+        }
+      }
+  
+      .slick-dots li button:before {
+        color: white;
+      }
+    }
+  }
 
-
-}
-
+  
