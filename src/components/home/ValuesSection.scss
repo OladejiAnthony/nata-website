@@ -88,3 +88,97 @@
     }
   }
 }
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {  // Tablet
+  .values__section {
+    height: auto;
+    padding: 1rem 3%;
+    
+    .heading {
+      .header__box {
+        h2 {
+          font-size: 28px; // Adjust heading size for tablets
+        }
+      }
+    }
+
+    ul {
+      li {
+        flex-direction: column; // Stack list items vertically on smaller screens
+        align-items: flex-start; // Keep items aligned at the start for better readability
+
+        h3 {
+          font-size: 18px; // Adjust heading size for tablets
+          min-width: unset; // Remove fixed width on smaller screens
+        }
+
+        p {
+          font-size: 16px; // Adjust paragraph size for tablets
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {  // Mobile
+  .values__section {
+    height: auto;
+    padding: 1rem 2%;
+
+    .heading {
+      .header__box {
+        h2 {
+          font-size: 24px; // Smaller heading size for mobile
+        }
+      }
+    }
+
+    ul {
+      li {
+        gap: 5px; // Reduce gap between h3 and p for smaller screens
+
+        h3 {
+          font-size: 16px; // Adjust heading size for mobile
+        }
+
+        p {
+          font-size: 14px; // Adjust paragraph size for mobile
+          line-height: 24px; // Adjust line-height for readability
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {  // Small mobile devices
+  .values__section {
+    padding: 1rem;
+
+    .heading {
+      .header__box {
+        h2 {
+          font-size: 20px; // Smallest heading size for small screens
+        }
+      }
+    }
+
+    ul {
+      li {
+        gap: 3px; // Further reduce the gap between h3 and p
+
+        h3 {
+          font-size: 14px; // Adjust heading size for small screens
+        }
+
+        p {
+          font-size: 12px; // Adjust paragraph size for very small screens
+          line-height: 22px; // Adjust line-height for readability
+        }
+      }
+    }
+  }
+}
+
+

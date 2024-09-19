@@ -82,3 +82,86 @@
     
   }
 }
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {  // Tablet
+  .mission__section {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+
+    .mission__image {
+      height: 300px; // Adjust image height for tablets
+      padding-left: 0; // Remove extra padding for smaller screens
+    }
+
+    .mission__text {
+      margin-top: 2rem;
+
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 28px; // Adjust heading size for tablets
+        }
+      }
+
+      p {
+        font-size: 18px; // Adjust text size for better readability on tablets
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {  // Mobile devices
+  .mission__section {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+
+    .mission__image {
+      height: 250px; // Adjust image height for mobile
+      padding-left: 0; // Remove padding for smaller screens
+    }
+
+    .mission__text {
+      margin-top: 1rem;
+
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 24px; // Smaller heading size for mobile devices
+        }
+      }
+
+      p {
+        font-size: 16px; // Smaller paragraph font size for mobile
+        line-height: 28px; // Adjust line-height for readability
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {  // Small mobile devices
+  .mission__section {
+    padding: 0rem 1rem;
+
+    .mission__image {
+      height: 200px; // Further reduce image height for very small screens
+    }
+
+    .mission__text {
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 20px; // Smaller h2 for small screens
+        }
+      }
+
+      p {
+        font-size: 14px; // Small font size for very small screens
+        line-height: 24px; // Reduced line height
+      }
+    }
+  }
+}

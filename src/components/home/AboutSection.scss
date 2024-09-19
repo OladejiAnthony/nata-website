@@ -100,3 +100,100 @@
     }
   }
 }
+
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {  // For tablets
+  .abt__section {
+    flex-direction: column;
+    height: auto; // Let height be flexible
+    padding: 2rem;
+
+    .abt__image {
+      height: 300px; // Adjust image height for tablets
+    }
+
+    .abt__text {
+      padding-left: 0;
+      margin-top: 2rem;
+
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 28px; // Slightly smaller font size for h2
+        }
+      }
+
+      p {
+        font-size: 18px; // Smaller font size for paragraph
+      }
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) { // For mobile devices
+  .abt__section {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+
+    .abt__image {
+      height: 250px; // Reduce image height further for mobile
+    }
+
+    .abt__text {
+      padding-left: 0;
+      margin-top: 1rem;
+
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 24px; // Further reduce font size for h2
+        }
+      }
+
+      p {
+        font-size: 16px; // Smaller font size for paragraph
+      }
+
+      a {
+        font-size: 16px;
+        padding: 0.5rem 1rem; // Smaller button padding
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) { // For very small mobile devices
+  .abt__section {
+    padding: 1rem;
+
+    .abt__image {
+      height: 200px; // Adjust image height for small screens
+    }
+
+    .abt__text {
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 20px; // Make h2 even smaller for tiny screens
+        }
+      }
+
+      p {
+        font-size: 14px; // Smaller font size for paragraph
+        line-height: 24px; // Adjust line height to fit smaller text
+      }
+
+      a {
+        font-size: 14px;
+        padding: 0.5rem 1rem; // Keep button small for tiny screens
+      }
+    }
+  }
+}

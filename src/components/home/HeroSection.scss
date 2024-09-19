@@ -99,4 +99,23 @@
 
 
 
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 50px;
+
+    .overlay {
+      padding: 100px 20px 0 20px;
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 25px;
+      }
+      a {
+        font-size: 14px;
+        width: 200px;
+      }
+    }
+  }
+}
 

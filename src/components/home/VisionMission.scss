@@ -82,3 +82,87 @@
     
   }
 }
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {  // Tablet
+  .vision__section {
+    flex-direction: column;
+    height: auto; // Flexible height for smaller screens
+    padding: 2rem;
+
+    .vision__image {
+      height: 300px; // Adjust image height for tablets
+    }
+
+    .vision__text {
+      padding-left: 0;
+      margin-top: 2rem;
+
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 28px; // Slightly smaller for h2 on tablets
+        }
+      }
+
+      p {
+        font-size: 18px; // Adjust font size for tablet screens
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {  // Mobile devices
+  .vision__section {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+
+    .vision__image {
+      height: 250px; // Adjust image height for mobile
+    }
+
+    .vision__text {
+      padding-left: 0;
+      margin-top: 1rem;
+
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 24px; // Smaller h2 for mobile
+        }
+      }
+
+      p {
+        font-size: 16px; // Reduce font size for mobile devices
+        line-height: 28px; // Adjust line-height for better readability
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {  // Small mobile devices
+  .vision__section {
+    padding: 1rem;
+
+    .vision__image {
+      height: 200px; // Further reduce image height for very small screens
+    }
+
+    .vision__text {
+      .header__box {
+        width: 100%;
+        h2 {
+          font-size: 20px; // Make h2 smaller for very small screens
+        }
+      }
+
+      p {
+        font-size: 14px; // Smaller paragraph font for tiny screens
+        line-height: 24px;
+      }
+    }
+  }
+}
+

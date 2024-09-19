@@ -74,29 +74,46 @@
   }
 }
 
+/* Tablet responsiveness */
 @media (max-width: 1024px) {
   .leaders__images {
     grid-template-columns: repeat(3, 1fr); // 3 columns grid for tablets
   }
+
+  .heading h2 {
+    font-size: 28px; // Slightly smaller heading for tablets
+  }
 }
 
+/* Small tablet responsiveness */
 @media (max-width: 768px) {
   .leaders__images {
     grid-template-columns: repeat(2, 1fr); // 2 columns grid for small tablets
   }
 
+  .heading h2 {
+    font-size: 26px; // Smaller heading for small tablets
+  }
+
   .leader_image h3 {
-    font-size: 20px; // Reduce font size for smaller screens
+    font-size: 20px; // Reduce font size for leader name
   }
 
   .leader_image p {
-    font-size: 16px; // Reduce font size for smaller screens
+    font-size: 16px; // Reduce font size for description
   }
 }
 
+/* Mobile responsiveness */
 @media (max-width: 480px) {
   .leaders__images {
-    grid-template-columns: 1fr; // Single column grid for mobile devices
+    display: flex!important;
+    flex-direction: column!important;
+    gap: 20px!important; // Reduce gap between leader images
+  }
+
+  .leader_image {
+    width: 100%!important;
   }
 
   .leader_image img {
@@ -104,12 +121,11 @@
   }
 
   .leader_image h3 {
-    font-size: 18px; // Further reduce font size for very small screens
+    font-size: 18px;
   }
 
   .leader_image p {
-    font-size: 14px; // Further reduce font size for very small screens
+    font-size: 14px;
   }
 }
-
 
