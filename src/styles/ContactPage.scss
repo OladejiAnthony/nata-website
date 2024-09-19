@@ -20,9 +20,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(
-      50%
-    ); // Darkens the background for better text visibility
+    filter: brightness(50%);
   }
 
   .mail {
@@ -32,7 +30,6 @@
     justify-content: center;
     gap: 32px;
     align-items: flex-start;
-    width: 100%;
     margin: 5rem 0 3rem 0;
 
     h2 {
@@ -40,15 +37,12 @@
       font-family: "Merriweather", serif;
       font-size: 32px;
       font-weight: 700;
-      line-height: normal;
     }
 
     .input__field {
       width: 100%;
-      max-width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       gap: 16px;
 
       .name__fields,
@@ -94,9 +88,7 @@
         color: #333;
         font-family: "Roboto", sans-serif;
         font-size: 24px;
-        font-style: normal;
         font-weight: 600;
-        line-height: normal;
         display: flex;
         justify-content: center;
         align-self: center;
@@ -112,26 +104,20 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 32px;
     align-items: flex-start;
-    width: 100%;
     margin: 2rem 0 3rem 0;
 
-    .contact__head {
-      h2 {
-        color: #333;
-        font-family: "Merriweather", serif;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
+    .contact__head h2 {
+      color: #333;
+      font-family: "Merriweather", serif;
+      font-size: 32px;
+      font-weight: 700;
     }
 
     .contact__icons {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); // 4 columns grid
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px;
       width: 100%;
       justify-items: flex-start;
@@ -152,33 +138,92 @@
         div {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          align-items: flex-start;
           h3 {
             color: #333;
             font-family: "Roboto", sans-serif;
             font-size: 20px;
-            font-style: normal;
             font-weight: 500;
-            line-height: normal;
           }
           p {
             color: #333;
             font-family: "Roboto", sans-serif;
             font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
           }
         }
       }
-    
     }
 
     .map {
       width: 100%;
       height: 60vh;
     }
+  }
 
+  // Media Queries for Responsiveness
+  @media (max-width: 1024px) {
+    .mail, .contact__info {
+      width: 90%;
+    }
+
+    .mail h2 {
+      font-size: 28px;
+    }
+
+    .input__field button {
+      width: 100%;
+    }
+
+    .contact__icons {
+      grid-template-columns: 1fr; // Stacks boxes on smaller screens
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 8rem 4% 2rem 4%;
+
+    .mail {
+      margin: 4rem 0 2rem 0;
+    }
+
+    .mail h2, .contact__info .contact__head h2 {
+      font-size: 24px;
+    }
+
+    .input__field button {
+      font-size: 20px;
+    }
+
+    .contact__icons .box {
+      width: 100%;
+    }
+
+    .map {
+      height: 50vh;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 6rem 3% 2rem 3%;
+
+    .mail h2, .contact__info .contact__head h2 {
+      font-size: 20px;
+    }
+
+    .input__field button {
+      font-size: 18px;
+      width: 100%!important;
+    }
+
+    .contact__icons .box {
+      gap: 8px;
+    }
+
+    .contact__icons .box div h3, .contact__icons .box div p {
+      font-size: 16px;
+    }
+
+    .map {
+      height: 40vh;
+    }
   }
 }

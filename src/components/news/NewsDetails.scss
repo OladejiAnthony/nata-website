@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   background-color: $neutral-lightest;
-  padding: 3rem 5%; // increased padding for better spacing
+  padding: 3rem 5%;
   margin: 5rem 0 3rem 0;
 
   .technician-training-card {
@@ -30,6 +30,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      
       h2 {
         font-size: 24px;
         color: #333;
@@ -64,39 +65,27 @@
       width: 442px;
       height: 72px;
       text-align: center;
-      //margin-bottom: 1rem;
       position: relative;
-      //background-color: #ffae43;
 
-      .upper_line {
+      .upper_line, .lower_line {
         background-color: #ffae43;
         content: "";
         position: absolute;
-        left: 0;
-        top: 0; /* Adjust this value to control the distance of the line from the text */
-        width: 60%; /* Start with zero width */
-        height: 2px; /* Height of the line */
+        width: 60%;
+        height: 2px;
       }
-      .lower_line {
-        background-color: #ffae43;
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0; /* Adjust this value to control the distance of the line from the text */
-        width: 60%; /* Start with zero width */
-        height: 2px; /* Height of the line */
-      }
+      .upper_line { top: 0; left: 0; }
+      .lower_line { bottom: 0; right: 0; }
 
       h2 {
         font-size: 32px;
         color: #333333;
         margin-top: 1rem;
         font-family: "Merriweather", serif;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
       }
     }
+
     a.see__all {
       display: flex;
       flex-direction: row;
@@ -106,16 +95,14 @@
         color: #1d4cbf;
         font-family: "Merriweather", serif;
         font-size: 24px;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
       }
     }
   }
 
   .news__card {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); // 4 columns grid
+    grid-template-columns: repeat(4, 1fr); // 4 columns grid for large screens
     gap: 40px;
     width: 96%;
     justify-items: center;
@@ -130,22 +117,19 @@
       text-decoration: none;
 
       img {
-        width: 100%; // Responsive width
+        width: 100%;
         max-width: 294px;
-        height: auto; // Maintain aspect ratio
+        height: auto;
         border-radius: 12px;
-        object-fit: cover; // Ensure the image covers the area
+        object-fit: cover;
       }
 
       h3 {
         color: #000;
         font-family: "Merriweather", serif;
         font-size: 20px;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
         margin-top: 1rem;
-        display: flex;
         align-self: flex-start;
       }
 
@@ -153,36 +137,66 @@
         color: #333;
         font-family: "Roboto", sans-serif;
         font-size: 18px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
         margin-top: 1rem;
         width: 294px;
         flex-wrap: wrap;
       }
+
       span {
         color: #333;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        display: flex;
-        align-self: flex-start;
         margin-top: 1.5rem;
+        align-self: flex-start;
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .technician-training-card {
-    flex-direction: column;
-    .training-image {
-      width: 100%;
-      height: auto;
+  // Responsive styles for medium and small screens
+  @media (max-width: 1200px) {
+    .news__card {
+      grid-template-columns: repeat(3, 1fr); // 3 columns grid for medium screens
+    }
+  }
+
+  @media (max-width: 900px) {
+    .news__card {
+      grid-template-columns: repeat(2, 1fr); // 2 columns grid for smaller screens
+    }
+  }
+
+  @media (max-width: 768px) {
+    .technician-training-card {
+      flex-direction: column; // Stacks the image and content for small screens
+      .training-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .news__card {
+      grid-template-columns: repeat(1, 1fr); // Single column grid for mobile screens
+    }
+  }
+
+  @media (max-width: 600px) {
+    .heading {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .heading .header__box h2 {
+      font-size: 24px; // Reduce heading size for smaller screens
+    }
+
+    a.see__all h3 {
+      font-size: 18px; // Smaller text for "See All" on mobile
+    }
+
+    .news__card {
+      gap: 20px; // Smaller gaps for mobile
     }
   }
 }
-
-

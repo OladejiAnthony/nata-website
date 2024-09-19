@@ -14,6 +14,10 @@ const Navbar = () => {
     setNavOpen(!navOpen);
   };
 
+  const closeNav = () => {
+    setNavOpen(false); // Ensure nav closes when a link is clicked
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -37,7 +41,7 @@ const Navbar = () => {
       }`}
     >
       <div className={styles["navbar__logo"]}>
-        <NavLink to="/">
+        <NavLink to="/" onClick={closeNav}>
           <img src={logo} alt="Nata Logo" />
         </NavLink>
       </div>
@@ -50,27 +54,27 @@ const Navbar = () => {
         }`}
       >
         <li>
-          <NavLink to="/" className={activeLink}>
+          <NavLink to="/" className={activeLink} onClick={closeNav}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/services" className={activeLink}>
+          <NavLink to="/services" className={activeLink} onClick={closeNav}>
             Services
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className={activeLink}>
+          <NavLink to="/about" className={activeLink} onClick={closeNav}>
             About Us
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className={activeLink}>
+          <NavLink to="/contact" className={activeLink} onClick={closeNav}>
             Contact Us
           </NavLink>
         </li>
         <li>
-          <NavLink to="/news" className={activeLink}>
+          <NavLink to="/news" className={activeLink} onClick={closeNav}>
             News
           </NavLink>
         </li>

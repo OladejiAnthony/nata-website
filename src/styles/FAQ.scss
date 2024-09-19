@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   background-color: $neutral-lightest;
-  padding: 10rem 5% 2rem 5%; // increased padding for better spacing
+  padding: 10rem 5% 2rem 5%;
   margin: 0 0 3rem 0;
 
   .faq__bg {
@@ -21,29 +21,27 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.5); // Add this line
-    background-blend-mode: multiply; // Add this line
-  
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: multiply;
 
     h2 {
-        color: #fff;
-        font-family: "Merriweather", serif;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-      p {
-        color: #e5e5e5;
-        text-align: center;
-        font-family: "Roboto", sans-serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 34px; /* 141.667% */
-        flex-wrap: wrap;
-        width: 75%;
-      }
+      color: #fff;
+      font-family: "Merriweather", serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    p {
+      color: #e5e5e5;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 34px;
+      flex-wrap: wrap;
+      width: 75%;
+    }
   }
 
   .faq__text {
@@ -56,24 +54,113 @@
       align-items: flex-start;
       margin-bottom: 7px;
       gap: 2px;
+
       h3 {
         color: #666;
         text-align: justify;
         font-family: Roboto;
         font-size: 20px;
-        font-style: normal;
         font-weight: 700;
         line-height: 32px;
       }
+
       p {
         color: #666;
         font-family: Roboto;
         font-size: 18px;
-        font-style: normal;
         font-weight: 400;
-        line-height: 32px; /* 133.333% */
+        line-height: 32px;
         letter-spacing: 0.5px;
       }
     }
   }
+
+  // Responsive styles for smaller screens
+  @media (max-width: 1200px) {
+    .faq__bg h2 {
+      font-size: 40px; // Reduce heading size for large tablets
+    }
+    .faq__bg p {
+      font-size: 22px; // Adjust paragraph size
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding: 8rem 5% 2rem 5%; // Reduce top padding for smaller screens
+    .faq__bg {
+      height: 50vh; // Reduce background height
+    }
+    .faq__bg h2 {
+      font-size: 36px; // Further reduce heading size
+    }
+    .faq__bg p {
+      font-size: 20px; // Adjust paragraph size
+      width: 85%;
+    }
+    .faq__text {
+      margin-top: 50px;
+    }
+
+    .faq__text li h3 {
+      font-size: 18px; // Adjust FAQ question font size
+    }
+
+    .faq__text li p {
+      font-size: 16px; // Adjust FAQ answer font size
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 6rem 5% 2rem 5%; // Further reduce padding
+    .faq__bg {
+      height: 40vh;
+    }
+    .faq__bg h2 {
+      font-size: 32px; // Smaller heading for mobile devices
+    }
+    .faq__bg p {
+      font-size: 18px; // Smaller text for mobile
+      width: 90%;
+    }
+
+    .faq__text li h3 {
+      font-size: 16px; // Smaller font size for questions
+    }
+
+    .faq__text li p {
+      font-size: 14px; // Smaller font size for answers
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 5rem 3% 2rem 3%; // Further reduce padding for mobile
+    .faq__bg {
+      height: 35vh; // Reduce background image height further
+    }
+    .faq__bg h2 {
+      font-size: 28px; // Smaller heading on mobile
+    }
+    .faq__bg p {
+      font-size: 16px;
+      width: 95%; // Maximize width for mobile
+    }
+  }
+
+  @media (max-width: 480px) {
+    .faq__bg h2 {
+      font-size: 24px; // Further reduce heading for very small screens
+    }
+    .faq__bg p {
+      font-size: 14px; // Smaller paragraph text
+    }
+    .faq__text li h3 {
+      font-size: 14px; // Even smaller question font size
+    }
+    .faq__text li p {
+      font-size: 12px; // Smaller answer font size
+    }
+  }
 }
+
+

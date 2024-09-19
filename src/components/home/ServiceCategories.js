@@ -51,6 +51,13 @@ const ServiceCategories = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
         }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.5, // Show 1.5 services at 480px width
+          slidesToScroll: 1,
+        }
       }
     ]
   };

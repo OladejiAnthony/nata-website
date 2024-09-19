@@ -16,6 +16,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 4rem;
+    align-self: center;
 
     .header__box {
       width: 442px;
@@ -23,7 +24,8 @@
       text-align: center;
       position: relative;
 
-      .upper_line, .lower_line {
+      .upper_line,
+      .lower_line {
         background-color: #ffae43;
         content: "";
         position: absolute;
@@ -77,6 +79,85 @@
         font-weight: 400;
         line-height: normal;
         margin-top: 0.5rem;
+      }
+    }
+  }
+
+  // Media queries for responsiveness
+
+  // Tablets and small laptops (between 768px and 1024px)
+  @media screen and (max-width: 1024px) {
+    padding: 8rem 3% 2rem 0;
+
+    .heading {
+      justify-content: center;
+    }
+
+    .heading .header__box {
+      width: 10%;
+      padding: 0 20%; // Make the header box take full width
+    }
+
+    .section {
+      padding-left: 3%;
+      p,
+      ul li {
+        font-size: 22px; // Adjust font size for smaller screens
+      }
+    }
+  }
+
+  // Mobile devices (between 480px and 768px)
+  @media screen and (max-width: 768px) {
+    padding: 6rem 2% 1rem 0;
+
+    .heading {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .heading .header__box {
+      width: 50%;
+      padding: 0 10%;
+    }
+
+    .heading .header__box h2 {
+      font-size: 28px; // Slightly smaller font size on mobile
+    }
+
+    .section {
+      padding-left: 2%;
+      margin-bottom: 3rem;
+      
+      p,
+      ul li {
+        font-size: 20px; // Adjust font size for medium screens
+      }
+    }
+  }
+
+  // Small mobile devices (below 480px)
+  @media screen and (max-width: 480px) {
+    padding: 4rem 3% 1rem 3%;
+    margin-top: 3rem;
+
+    .heading .header__box {
+      width: 80%;
+      height: 82px;
+    }
+
+    .heading .header__box h2 {
+      font-size: 24px; // Even smaller font for small screens
+    }
+
+    .section {
+      padding-left: 1%;
+      margin-bottom: 2rem;
+
+      p,
+      ul li {
+        font-size: 18px; // Smaller font for small screens
       }
     }
   }
